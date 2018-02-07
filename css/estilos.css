@@ -1,0 +1,227 @@
+        /* ----------   AUTOR Y FECHA   ---------- */
+
+
+
+        /* ----------   ESTILOS GENERALES  ---------- */
+
+*{margin: 0;padding: 0;box-sizing: border-box}
+
+body{color: rgba(0, 0, 0, 0.966);
+        font-family: 'Merriweather', serif;font-size: 22px; 
+        background-color: rgba(137, 180, 57, 0.116)} 
+
+a {text-decoration: none; color: rgba(0, 121, 96, 0.986); font-weight: 1000 }
+
+a:hover {color:rgba(1, 59, 47, 0.986)}
+
+a.activo1{color: rgba(1, 59, 47, 0.986)}
+a:active{color: rgba(131, 180, 57, 0.651)}
+ 
+img {max-width: 100%}
+
+p{padding: 10px; line-height: 1.5em}
+
+.boton{margin: 40px; color: white; background-color: rgba(131, 180, 57, 0.651);
+         font-size: 24px; padding: 10px;border-radius: 10px;}
+
+.naranja{background-color: #DF4215}
+.azul {background-color:#0D71B9}
+.amarillo {background-color:#E8A50A}
+
+.naranja:hover {background-color: #EA5C1C}
+.azul:hover {background-color:#2DABE3}
+.amarillo:hover {background-color:#F3C100}
+
+
+@keyframes intermitente {
+        0% {opacity: 0;}
+        50% {opacity: 1;}
+        100% {opacity:0;}
+}
+        
+.separador{border: solid 1px rgb(131, 180, 57); display: none; width: 60%}  
+
+
+        /* ----------   CABECERA CON BARRA DE NAVEGACIÓN  ---------- */
+
+header {border: 1px solid rgb(0, 0, 0);
+        position: absolute /*absoluta a su padre body*/ ; top: 0;
+        display: flex; justify-content: space-between; height: 100px;
+        /* Altura común de cabeceras: 80, 120, etc */
+        width: 100%; padding: 20px; align-items: center}
+
+header .burger {color: gray; font-size: 25px; display: none;}
+
+.normal {box-shadow: 0 4px 8px gray; border: none; font-size: 75%; position: initial;}
+
+header nav ul {border: 1px solid rgb(0, 0, 0); list-style: none;display: flex;}
+
+header nav ul li {padding: 10px}
+
+header nav ul li a {color: rgb(255, 0, 64)}
+  
+.normal nav ul li a {color:  rgb(189, 0, 47)}
+.normal nav ul li a.activo1{color: rgba(1, 59, 47, 0.986)}
+.normal nav ul li a:hover{color: rgba(1, 59, 47, 0.986)}
+.normal nav ul li a:active{color: rgba(131, 180, 57, 0.651)}
+         
+        /* ----------   CLASES  ---------- */
+
+/* Sección HERO */
+.hero {height: 100vh;background-image: url('../img/jpg-png/internetx-594148_1920.jpg');
+        background-repeat: no-repeat; background-position: center;
+        background-size: cover;background-attachment: fixed; display: flex;
+        flex-direction: column; justify-content: flex-end; align-items: center;}
+
+.hero h1 {font-size: 60px; text-shadow: 2px 2px 2px rgba(220, 20, 60, 0.425);}
+
+.hero h2 {color: rgb(36, 36, 36); font-size: 30px; margin-bottom: 80px;}
+
+.hero a {color: rgb(36, 36, 36); font-size: 40px; margin-bottom: 40px;
+         animation-name: intermitente; animation-duration: 1550ms; 
+         animation-iteration-count: infinite; }
+
+/* LAYOUT maquetación */
+.fila {padding: 40px; display:flex;flex-wrap: wrap;}
+
+.ultima {margin-bottom: 40px}
+
+.col1{/*border: solid 1px chocolate;*/padding: 10px;flex-basis: 300px;flex-grow: 1;}
+
+.col2{/*border: solid 1px chocolate;*/;padding: 10px;flex-basis: 300px;flex-grow: 2;}
+
+.col3{/*border: solid 1px chocolate;*/;padding: 10px;flex-basis: 300px;flex-grow: 3;}
+
+.col100 {padding: 10px; width: 100%; display: flex;justify-content: center;
+                align-items: center /*Valor por defecto: strech*/}
+
+.centrado{display: flex; align-items: center;justify-content: center}
+
+.piederecho {display: flex;align-items: flex-end;}
+
+.columna{display:flex; flex-direction: column; justify-content: center;
+        align-items: center}
+
+
+/* Sección con imagen de fondo */
+.fondo {background-image: url('../fondo/animals-2609323_1920.jpg');
+        background-position:center; background-size: cover; background-repeat: no-repeat
+        padding: 60px 40px;height:250px;}
+
+.slogan {font-size: 40px; /*color*/; text-align: center;
+        background-color: rgba(255, 255, 255, 0.16)}
+
+/* Formulario newsletter */
+.input_newsletter {color: rgba(0, 0, 0, 0.651);font-size: 20px;padding: 10px; 
+        border:4px solid rgba(131, 180, 57, 0.651); margin: 0px 10px;
+        border-radius: 25px; padding-left:23px; }
+
+.boton_newsletter{margin: 10px; color: rgb(36, 36, 36); background-color: rgba(128, 128, 128, 0.25);
+                font-size: 20px; padding: 10px;border-radius: 25px; 
+                border: 4px solid rgba(131, 180, 57, 0.651)}
+
+.boton_newsletter:hover{background-color: rgba(158, 219, 67, 0.719) ;cursor: pointer}
+
+.boton_newsletter:focus, .input_newsletter:focus {outline:none;}
+
+.newsletter {font-size: 28px; color: rgb(131, 180, 57)}
+
+/* Footer */
+footer {opacity: 0.9;
+background:
+radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, rgba(255, 255, 255, 0.4) 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+radial-gradient(at 100% 100%,      rgba(96, 16, 48, 0) 9px, rgba(255, 255, 255, 0.4) 10px, rgba(96, 16, 48, 0) 11px),
+rgba(136, 170, 51, 0.925);
+background-size: 20px 20px; 
+color:rgba(1, 59, 47, 0.986); display: flex;flex-wrap: wrap; font-size: 20px; 
+position: relative;}
+/* color: #3f3f3f */
+
+        /* hijo de dooter */
+.top{font-size: 30px;position: absolute; top:-40px;right: 50%; background-color: rgba(136, 170, 51, 0.925);
+        height: 50px; width: 50px; color: rgb(255, 255, 255); border-radius: 35px;display: flex; 
+        justify-content: center;align-items: center; transform: translateX(50%)}
+
+.izquierda {padding:20px}
+
+.izquierda p {padding: 5px}
+
+.derecha {font-size: 40px; display: flex;flex-direction: column;
+        justify-content: space-between;align-items: center;flex-wrap: wrap;padding:20px}
+
+.derecha a {color:rgba(1, 59, 47, 0.986)}
+
+
+.centro {display: flex; flex-direction: column;justify-content: space-around;
+         align-items: center;padding:20px}
+.dragon{font-size: 60px}
+
+.legales a {font-size: 14px;}
+
+.centro a {color: rgba(1, 59, 47, 0.986);}
+.centro a.activo2{color: white}
+
+footer a:hover {color: white}
+
+.minifooter {font-size: 14px;padding: 5px;}
+
+
+        /* ----------   ESTILOS DE CONTACTO  ---------- */
+
+.direccion{line-height: 1.8em; font-size: 100%}
+
+iframe{box-shadow: 4px 4px 8px gray}
+
+h1{font-size: 34px;padding: 10px}
+
+h2{font-size: 26px;padding: 10px}
+
+ul {padding-left: 60px}
+
+li{padding: 10px; line-height: 1.4em}
+
+
+        /* ----------   MEDIA QUERIES  ---------- */
+
+@media (max-width: 920px){
+        .izquierda, .centro, .derecha {flex-basis: 200px;}
+}
+
+@media (max-width: 700px){
+        nav {display: none;}
+        header .burger {display: initial;}
+        .hero h1 {font-size: 34px; text-shadow: 2px 2px 2px rgba(220, 20, 60, 0.425);
+        text-align: center}
+        .hero h2 {font-size: 24px; text-align: center}
+        body {font-size: 18px;}
+        .columna img {height: 160px;}
+        .columna .boton {margin: 40px; font-size: 18px; padding: 12px; border-radius: 12px}
+        .slogan{font-size: 35px}
+        .newsletter{font-size: 26px; text-align: center}
+        .input_newsletter {font-size: 18px;padding: 12px; border-radius: 24px;}
+        .boton_newsletter {font-size: 18px;padding: 10px; border-radius: 24px;}
+}
+
+@media (max-width: 640px){
+        body {font-size: 17px;}
+        .fila {flex-direction: column; align-items: center;}
+        .separador{display: initial}
+        /* .piederecho {display: flex;align-items: flex-start;} */
+        .col1{flex-basis: initial; margin: 20px}
+        .slogan{font-size: 26px}
+        .newsletter{font-size: 24px; text-align: center;}
+        .input_newsletter {font-size: 16px;padding: 12px; border-radius: 24px;}
+        .boton_newsletter {font-size: 16px;padding: 10px; border-radius: 25px;}
+}
+
+@media (max-width: 420px){
+        body {font-size: 16px;padding: 8px;}
+        .fila {padding: 25px 10px;}
+        .newsletter{font-size: 20px; text-align: center}
+        .input_newsletter {font-size: 14px;padding: 12px; border-radius: 24px;}
+        .boton_newsletter {font-size: 14px;padding: 10px; border-radius: 24px;}
+}
+
+@media (max-width:415px){
+        .izquierda, .centro, .derecha {flex-basis: 100px;}
+}
